@@ -225,4 +225,10 @@ app.get('/close-trade',async function (req, res) {
   console.log(await account.undeploy());
      res.send(responseToSend);
 });
-app.listen(process.env.PORT || 3000)
+
+var server = app.listen(3000, function() {
+  console.log('Express server listening on port ' + port);
+});
+
+const timeout = 120*1000;
+server.setTimeout(timeout);
