@@ -12,9 +12,9 @@ let MetaApi = require('metaapi.cloud-sdk').default;
 
 app.get('/get-all-symbols', async function(req, res){
 
-  const token = 'eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI3MWMyNWVkZmJiYjQ0ZTllNjdjODk0MzY3MWFkYjQ4ZSIsInBlcm1pc3Npb25zIjpbXSwidG9rZW5JZCI6IjIwMjEwMjEzIiwiaW1wZXJzb25hdGVkIjpmYWxzZSwicmVhbFVzZXJJZCI6IjcxYzI1ZWRmYmJiNDRlOWU2N2M4OTQzNjcxYWRiNDhlIiwiaWF0IjoxNjc0MDI1NjIzfQ.GOMOBCWFw_8QNor2RbYmeouV54g1wrIAJ38ROetUQLY0cJAgZ1diEKB7fYq_MupxQDOHGPc3IwTpC9sfcdVUtazC55cqCrWNHMQhf0hyP6-m9ib7B0CANUbWkxt1Z5lBgRmUeK_SwaZzqQejtUin8X6cC4NCVGgbIAubpsem4F6mgKSDOxfqToXBUmaYmA1xoYmEbZSEHVjuyyvSbsPnKjL_jePIm6tGxGmETEEwFLufv4QgtPvV9XaiNH7fKlD0R8JtuFSQcxxvnvIlOR01pq1XqGpIr7C0jVuQjB5UtlFdNLvzzVjetheUGP9tKtpZ94bw3BCz-N8ek2MKZRKQv3FVkxrDnpqtjaaNYSEH87Up1aTnZ14bvAnNsvxkXTwbTA0gnr9mkXH7rP5QuuLKlB2XZQNo7WT25qHzBfvHO2fDSD-Z5Ox2fE95IAkrW6O5pJrvOCooq68xCER3Mdv3lwnOVq5x5YdxbikAWrcVCfdXVvmbADlF33vWDq3s9dPmok21QIgls_a1ltXyUdkip3QhVFQREMgQzoPtE6bZ4rLvSXwvwKmgjsaqMP-pfu9v9JILvqPxQH2eUN1y25x5znMR1RA7AD5sJP_F19nsqtkN4v0s_rL2AESZ_shL79LSgECO5lw-rPhJtmrENik8qgIvaKC4TmVN1-R_alXgB3A';
+  const token = 'eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI3MWMyNWVkZmJiYjQ0ZTllNjdjODk0MzY3MWFkYjQ4ZSIsInBlcm1pc3Npb25zIjpbXSwidG9rZW5JZCI6IjIwMjEwMjEzIiwiaW1wZXJzb25hdGVkIjpmYWxzZSwicmVhbFVzZXJJZCI6IjcxYzI1ZWRmYmJiNDRlOWU2N2M4OTQzNjcxYWRiNDhlIiwiaWF0IjoxNjc2MTg0Nzk0fQ.AHJNAPD8H7ungxVq_IYB7TZB5IJzeTTgyK1qsujZt5rsQd69xeeIgBQib-87WE2q837h197MM1o1p0d7pYmxYq2x3hQ44RfSHtAdwkhDemW95nGVXz4pCee_6edX-ozPpHkx1YZaiDJll6O22hBaw7VhbPhBsx0SPR9QL5fOpBiAzzYLj-XEZplYedrMBGbbUfJPEJ9ekcf0989tt5xy3vEGshqlyjYr_LbhfkeJOeFZRmPlmUwPPmh8lq43whs4cm2zE12Yf3zDs2groQgDXSjr9TkeEK_4yiuhbwytKIcv5coxMXu8HdfZ3j_tBxTCO6dYzC1pqm9eYXmAamg6tF3Pv8ur8tHTxGTDFCVy9RlD8tgYWtsOefoh2_2vAgVPAiKfWntF8nPQHbEKfzkSjbJtBE9Phc0S0DGpOHaIYG4ZdmErYUDa4S967EbIEHBrw2QKPUxM5f5C_jHWygoz69I9uy7U5EZuvcbV3nUfd9X-qrwXKJsIrOOXuw1BKH0x5MAmg3ptB3_PQ4k0Qf6bUdtw1rs9Q77DmjC6woMBGIPMOYSGem2jcTJPuZKttbUaYeuYLk0TiDI6x-3A-LKV0HjFvfvxXFdK0Tcnd27eMbtVcXAWRllRIvsJE404RNLqxtMoSR3tos6DEu3luiM9SH4_ElNu0hKhrkJRJB72EYw';
   const api = new MetaApi(token);
-  const account = await api.metatraderAccountApi.getAccount('c8d89fdf-afc3-4a86-9162-b4eb1142e31d');
+  const account = await api.metatraderAccountApi.getAccount('99aa1270-d837-434c-8076-1b6c92615ec1');
   console.log(await account.deploy());
   const connection = await account.getRPCConnection();
   await connection.connect();
@@ -26,9 +26,9 @@ app.get('/get-all-symbols', async function(req, res){
 
 
 app.get('/open-trade',async function (req, res) {
-  const token = 'eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI3MWMyNWVkZmJiYjQ0ZTllNjdjODk0MzY3MWFkYjQ4ZSIsInBlcm1pc3Npb25zIjpbXSwidG9rZW5JZCI6IjIwMjEwMjEzIiwiaW1wZXJzb25hdGVkIjpmYWxzZSwicmVhbFVzZXJJZCI6IjcxYzI1ZWRmYmJiNDRlOWU2N2M4OTQzNjcxYWRiNDhlIiwiaWF0IjoxNjc0MDI1NjIzfQ.GOMOBCWFw_8QNor2RbYmeouV54g1wrIAJ38ROetUQLY0cJAgZ1diEKB7fYq_MupxQDOHGPc3IwTpC9sfcdVUtazC55cqCrWNHMQhf0hyP6-m9ib7B0CANUbWkxt1Z5lBgRmUeK_SwaZzqQejtUin8X6cC4NCVGgbIAubpsem4F6mgKSDOxfqToXBUmaYmA1xoYmEbZSEHVjuyyvSbsPnKjL_jePIm6tGxGmETEEwFLufv4QgtPvV9XaiNH7fKlD0R8JtuFSQcxxvnvIlOR01pq1XqGpIr7C0jVuQjB5UtlFdNLvzzVjetheUGP9tKtpZ94bw3BCz-N8ek2MKZRKQv3FVkxrDnpqtjaaNYSEH87Up1aTnZ14bvAnNsvxkXTwbTA0gnr9mkXH7rP5QuuLKlB2XZQNo7WT25qHzBfvHO2fDSD-Z5Ox2fE95IAkrW6O5pJrvOCooq68xCER3Mdv3lwnOVq5x5YdxbikAWrcVCfdXVvmbADlF33vWDq3s9dPmok21QIgls_a1ltXyUdkip3QhVFQREMgQzoPtE6bZ4rLvSXwvwKmgjsaqMP-pfu9v9JILvqPxQH2eUN1y25x5znMR1RA7AD5sJP_F19nsqtkN4v0s_rL2AESZ_shL79LSgECO5lw-rPhJtmrENik8qgIvaKC4TmVN1-R_alXgB3A';
+  const token = 'eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI3MWMyNWVkZmJiYjQ0ZTllNjdjODk0MzY3MWFkYjQ4ZSIsInBlcm1pc3Npb25zIjpbXSwidG9rZW5JZCI6IjIwMjEwMjEzIiwiaW1wZXJzb25hdGVkIjpmYWxzZSwicmVhbFVzZXJJZCI6IjcxYzI1ZWRmYmJiNDRlOWU2N2M4OTQzNjcxYWRiNDhlIiwiaWF0IjoxNjc2MTg0Nzk0fQ.AHJNAPD8H7ungxVq_IYB7TZB5IJzeTTgyK1qsujZt5rsQd69xeeIgBQib-87WE2q837h197MM1o1p0d7pYmxYq2x3hQ44RfSHtAdwkhDemW95nGVXz4pCee_6edX-ozPpHkx1YZaiDJll6O22hBaw7VhbPhBsx0SPR9QL5fOpBiAzzYLj-XEZplYedrMBGbbUfJPEJ9ekcf0989tt5xy3vEGshqlyjYr_LbhfkeJOeFZRmPlmUwPPmh8lq43whs4cm2zE12Yf3zDs2groQgDXSjr9TkeEK_4yiuhbwytKIcv5coxMXu8HdfZ3j_tBxTCO6dYzC1pqm9eYXmAamg6tF3Pv8ur8tHTxGTDFCVy9RlD8tgYWtsOefoh2_2vAgVPAiKfWntF8nPQHbEKfzkSjbJtBE9Phc0S0DGpOHaIYG4ZdmErYUDa4S967EbIEHBrw2QKPUxM5f5C_jHWygoz69I9uy7U5EZuvcbV3nUfd9X-qrwXKJsIrOOXuw1BKH0x5MAmg3ptB3_PQ4k0Qf6bUdtw1rs9Q77DmjC6woMBGIPMOYSGem2jcTJPuZKttbUaYeuYLk0TiDI6x-3A-LKV0HjFvfvxXFdK0Tcnd27eMbtVcXAWRllRIvsJE404RNLqxtMoSR3tos6DEu3luiM9SH4_ElNu0hKhrkJRJB72EYw';
   const api = new MetaApi(token);
-  const account = await api.metatraderAccountApi.getAccount('c8d89fdf-afc3-4a86-9162-b4eb1142e31d');
+  const account = await api.metatraderAccountApi.getAccount('99aa1270-d837-434c-8076-1b6c92615ec1');
   console.log(await account.deploy());
   //let accountAccessToken = account.accessToken;
   //console.log(accountAccessToken);
@@ -57,7 +57,7 @@ app.get('/open-trade',async function (req, res) {
 
   if(action=='Buy'){
     try {
-      var response = await connection.createLimitBuyOrder(symbol, 0.1, open_price, sl, tp1, {comment: 'comment', clientId: 'TE_GBPUSD_7hyINWqAl'});
+      var response = await connection.createLimitBuyOrder(symbol, 0.07, open_price, sl, tp1, {comment: 'comment', clientId: 'TE_GBPUSD_7hyINWqAl'});
       responseToSend.push(response); 
     } catch (error) {
       var erro={"error":error};
@@ -65,7 +65,7 @@ app.get('/open-trade',async function (req, res) {
     }
     
     try {
-      var response = await connection.createLimitBuyOrder(symbol, 0.05, open_price, sl, tp2, {comment: 'comment', clientId: 'TE_GBPUSD_7hyINWqAl'});
+      var response = await connection.createLimitBuyOrder(symbol, 0.03, open_price, sl, tp2, {comment: 'comment', clientId: 'TE_GBPUSD_7hyINWqAl'});
       responseToSend.push(response); 
     } catch (error) {
       var erro={"error":error};
@@ -81,7 +81,7 @@ app.get('/open-trade',async function (req, res) {
     }
   }else{
     try {
-      var response = await connection.createLimitSellOrder(symbol, 0.1, open_price, sl, tp1, {comment: 'comment', clientId: 'TE_GBPUSD_7hyINWqAl'});
+      var response = await connection.createLimitSellOrder(symbol, 0.07, open_price, sl, tp1, {comment: 'comment', clientId: 'TE_GBPUSD_7hyINWqAl'});
       responseToSend.push(response); 
     } catch (error) {
       var erro={"error":error};
@@ -89,7 +89,7 @@ app.get('/open-trade',async function (req, res) {
     }
     
     try {
-      var response = await connection.createLimitSellOrder(symbol, 0.05, open_price, sl, tp2, {comment: 'comment', clientId: 'TE_GBPUSD_7hyINWqAl'});
+      var response = await connection.createLimitSellOrder(symbol, 0.03, open_price, sl, tp2, {comment: 'comment', clientId: 'TE_GBPUSD_7hyINWqAl'});
       responseToSend.push(response); 
     } catch (error) {
       var erro={"error":error};
@@ -122,9 +122,9 @@ app.get('/open-trade',async function (req, res) {
 
 
 app.get('/modify-trade',async function (req, res) {
-  const token = 'eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI3MWMyNWVkZmJiYjQ0ZTllNjdjODk0MzY3MWFkYjQ4ZSIsInBlcm1pc3Npb25zIjpbXSwidG9rZW5JZCI6IjIwMjEwMjEzIiwiaW1wZXJzb25hdGVkIjpmYWxzZSwicmVhbFVzZXJJZCI6IjcxYzI1ZWRmYmJiNDRlOWU2N2M4OTQzNjcxYWRiNDhlIiwiaWF0IjoxNjc0MDI1NjIzfQ.GOMOBCWFw_8QNor2RbYmeouV54g1wrIAJ38ROetUQLY0cJAgZ1diEKB7fYq_MupxQDOHGPc3IwTpC9sfcdVUtazC55cqCrWNHMQhf0hyP6-m9ib7B0CANUbWkxt1Z5lBgRmUeK_SwaZzqQejtUin8X6cC4NCVGgbIAubpsem4F6mgKSDOxfqToXBUmaYmA1xoYmEbZSEHVjuyyvSbsPnKjL_jePIm6tGxGmETEEwFLufv4QgtPvV9XaiNH7fKlD0R8JtuFSQcxxvnvIlOR01pq1XqGpIr7C0jVuQjB5UtlFdNLvzzVjetheUGP9tKtpZ94bw3BCz-N8ek2MKZRKQv3FVkxrDnpqtjaaNYSEH87Up1aTnZ14bvAnNsvxkXTwbTA0gnr9mkXH7rP5QuuLKlB2XZQNo7WT25qHzBfvHO2fDSD-Z5Ox2fE95IAkrW6O5pJrvOCooq68xCER3Mdv3lwnOVq5x5YdxbikAWrcVCfdXVvmbADlF33vWDq3s9dPmok21QIgls_a1ltXyUdkip3QhVFQREMgQzoPtE6bZ4rLvSXwvwKmgjsaqMP-pfu9v9JILvqPxQH2eUN1y25x5znMR1RA7AD5sJP_F19nsqtkN4v0s_rL2AESZ_shL79LSgECO5lw-rPhJtmrENik8qgIvaKC4TmVN1-R_alXgB3A';
+  const token = 'eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI3MWMyNWVkZmJiYjQ0ZTllNjdjODk0MzY3MWFkYjQ4ZSIsInBlcm1pc3Npb25zIjpbXSwidG9rZW5JZCI6IjIwMjEwMjEzIiwiaW1wZXJzb25hdGVkIjpmYWxzZSwicmVhbFVzZXJJZCI6IjcxYzI1ZWRmYmJiNDRlOWU2N2M4OTQzNjcxYWRiNDhlIiwiaWF0IjoxNjc2MTg0Nzk0fQ.AHJNAPD8H7ungxVq_IYB7TZB5IJzeTTgyK1qsujZt5rsQd69xeeIgBQib-87WE2q837h197MM1o1p0d7pYmxYq2x3hQ44RfSHtAdwkhDemW95nGVXz4pCee_6edX-ozPpHkx1YZaiDJll6O22hBaw7VhbPhBsx0SPR9QL5fOpBiAzzYLj-XEZplYedrMBGbbUfJPEJ9ekcf0989tt5xy3vEGshqlyjYr_LbhfkeJOeFZRmPlmUwPPmh8lq43whs4cm2zE12Yf3zDs2groQgDXSjr9TkeEK_4yiuhbwytKIcv5coxMXu8HdfZ3j_tBxTCO6dYzC1pqm9eYXmAamg6tF3Pv8ur8tHTxGTDFCVy9RlD8tgYWtsOefoh2_2vAgVPAiKfWntF8nPQHbEKfzkSjbJtBE9Phc0S0DGpOHaIYG4ZdmErYUDa4S967EbIEHBrw2QKPUxM5f5C_jHWygoz69I9uy7U5EZuvcbV3nUfd9X-qrwXKJsIrOOXuw1BKH0x5MAmg3ptB3_PQ4k0Qf6bUdtw1rs9Q77DmjC6woMBGIPMOYSGem2jcTJPuZKttbUaYeuYLk0TiDI6x-3A-LKV0HjFvfvxXFdK0Tcnd27eMbtVcXAWRllRIvsJE404RNLqxtMoSR3tos6DEu3luiM9SH4_ElNu0hKhrkJRJB72EYw';
   const api = new MetaApi(token);
-  const account = await api.metatraderAccountApi.getAccount('c8d89fdf-afc3-4a86-9162-b4eb1142e31d');
+  const account = await api.metatraderAccountApi.getAccount('99aa1270-d837-434c-8076-1b6c92615ec1');
   console.log(await account.deploy());
   //let accountAccessToken = account.accessToken;
   //console.log(accountAccessToken);
@@ -180,9 +180,9 @@ app.get('/modify-trade',async function (req, res) {
 
 
 app.get('/close-trade',async function (req, res) {
-  const token = 'eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI3MWMyNWVkZmJiYjQ0ZTllNjdjODk0MzY3MWFkYjQ4ZSIsInBlcm1pc3Npb25zIjpbXSwidG9rZW5JZCI6IjIwMjEwMjEzIiwiaW1wZXJzb25hdGVkIjpmYWxzZSwicmVhbFVzZXJJZCI6IjcxYzI1ZWRmYmJiNDRlOWU2N2M4OTQzNjcxYWRiNDhlIiwiaWF0IjoxNjc0MDI1NjIzfQ.GOMOBCWFw_8QNor2RbYmeouV54g1wrIAJ38ROetUQLY0cJAgZ1diEKB7fYq_MupxQDOHGPc3IwTpC9sfcdVUtazC55cqCrWNHMQhf0hyP6-m9ib7B0CANUbWkxt1Z5lBgRmUeK_SwaZzqQejtUin8X6cC4NCVGgbIAubpsem4F6mgKSDOxfqToXBUmaYmA1xoYmEbZSEHVjuyyvSbsPnKjL_jePIm6tGxGmETEEwFLufv4QgtPvV9XaiNH7fKlD0R8JtuFSQcxxvnvIlOR01pq1XqGpIr7C0jVuQjB5UtlFdNLvzzVjetheUGP9tKtpZ94bw3BCz-N8ek2MKZRKQv3FVkxrDnpqtjaaNYSEH87Up1aTnZ14bvAnNsvxkXTwbTA0gnr9mkXH7rP5QuuLKlB2XZQNo7WT25qHzBfvHO2fDSD-Z5Ox2fE95IAkrW6O5pJrvOCooq68xCER3Mdv3lwnOVq5x5YdxbikAWrcVCfdXVvmbADlF33vWDq3s9dPmok21QIgls_a1ltXyUdkip3QhVFQREMgQzoPtE6bZ4rLvSXwvwKmgjsaqMP-pfu9v9JILvqPxQH2eUN1y25x5znMR1RA7AD5sJP_F19nsqtkN4v0s_rL2AESZ_shL79LSgECO5lw-rPhJtmrENik8qgIvaKC4TmVN1-R_alXgB3A';
+  const token = 'eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI3MWMyNWVkZmJiYjQ0ZTllNjdjODk0MzY3MWFkYjQ4ZSIsInBlcm1pc3Npb25zIjpbXSwidG9rZW5JZCI6IjIwMjEwMjEzIiwiaW1wZXJzb25hdGVkIjpmYWxzZSwicmVhbFVzZXJJZCI6IjcxYzI1ZWRmYmJiNDRlOWU2N2M4OTQzNjcxYWRiNDhlIiwiaWF0IjoxNjc2MTg0Nzk0fQ.AHJNAPD8H7ungxVq_IYB7TZB5IJzeTTgyK1qsujZt5rsQd69xeeIgBQib-87WE2q837h197MM1o1p0d7pYmxYq2x3hQ44RfSHtAdwkhDemW95nGVXz4pCee_6edX-ozPpHkx1YZaiDJll6O22hBaw7VhbPhBsx0SPR9QL5fOpBiAzzYLj-XEZplYedrMBGbbUfJPEJ9ekcf0989tt5xy3vEGshqlyjYr_LbhfkeJOeFZRmPlmUwPPmh8lq43whs4cm2zE12Yf3zDs2groQgDXSjr9TkeEK_4yiuhbwytKIcv5coxMXu8HdfZ3j_tBxTCO6dYzC1pqm9eYXmAamg6tF3Pv8ur8tHTxGTDFCVy9RlD8tgYWtsOefoh2_2vAgVPAiKfWntF8nPQHbEKfzkSjbJtBE9Phc0S0DGpOHaIYG4ZdmErYUDa4S967EbIEHBrw2QKPUxM5f5C_jHWygoz69I9uy7U5EZuvcbV3nUfd9X-qrwXKJsIrOOXuw1BKH0x5MAmg3ptB3_PQ4k0Qf6bUdtw1rs9Q77DmjC6woMBGIPMOYSGem2jcTJPuZKttbUaYeuYLk0TiDI6x-3A-LKV0HjFvfvxXFdK0Tcnd27eMbtVcXAWRllRIvsJE404RNLqxtMoSR3tos6DEu3luiM9SH4_ElNu0hKhrkJRJB72EYw';
   const api = new MetaApi(token);
-  const account = await api.metatraderAccountApi.getAccount('c8d89fdf-afc3-4a86-9162-b4eb1142e31d');
+  const account = await api.metatraderAccountApi.getAccount('99aa1270-d837-434c-8076-1b6c92615ec1');
   console.log(await account.deploy());
   //let accountAccessToken = account.accessToken;
   //console.log(accountAccessToken);
