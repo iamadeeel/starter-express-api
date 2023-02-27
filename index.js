@@ -123,7 +123,7 @@ app.get('/open-trade',async function (req, res) {
 
   if(action=='Buy'){
     try {
-      var response = await connection.createMarketBuyOrder(symbol, 0.05, sl, tp1, {comment: 'comment', clientId: 'TE_GBPUSD_7hyINWqAl'});
+      var response = await connection.createMarketBuyOrder(symbol, 0.01, sl, tp1, {comment: 'comment', clientId: 'TE_GBPUSD_7hyINWqAl'});
       responseToSend.push(response); 
     } catch (error) {
       var erro={"error":error};
@@ -131,7 +131,7 @@ app.get('/open-trade',async function (req, res) {
     }
     
     try {
-      var response = await connection.createMarketBuyOrder(symbol, 0.02, sl, tp2, {comment: 'comment', clientId: 'TE_GBPUSD_7hyINWqAl'});
+      var response = await connection.createMarketBuyOrder(symbol, 0.01, sl, tp2, {comment: 'comment', clientId: 'TE_GBPUSD_7hyINWqAl'});
       responseToSend.push(response); 
     } catch (error) {
       var erro={"error":error};
@@ -147,7 +147,7 @@ app.get('/open-trade',async function (req, res) {
     }
   }else{
     try {
-      var response = await connection.createMarketSellOrder(symbol, 0.05, sl, tp1, {comment: 'comment', clientId: 'TE_GBPUSD_7hyINWqAl'});
+      var response = await connection.createMarketSellOrder(symbol, 0.01, sl, tp1, {comment: 'comment', clientId: 'TE_GBPUSD_7hyINWqAl'});
       responseToSend.push(response); 
     } catch (error) {
       var erro={"error":error};
@@ -155,7 +155,7 @@ app.get('/open-trade',async function (req, res) {
     }
     
     try {
-      var response = await connection.createMarketSellOrder(symbol, 0.02, sl, tp2, {comment: 'comment', clientId: 'TE_GBPUSD_7hyINWqAl'});
+      var response = await connection.createMarketSellOrder(symbol, 0.01, sl, tp2, {comment: 'comment', clientId: 'TE_GBPUSD_7hyINWqAl'});
       responseToSend.push(response); 
     } catch (error) {
       var erro={"error":error};
